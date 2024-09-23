@@ -297,7 +297,9 @@ button:hover {
 }
 
 @media (max-width: 500px) {
-    nav a{
-        font-size: 16px;
+    nav ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 }
