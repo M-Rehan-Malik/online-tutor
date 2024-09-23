@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+:root {
+    /* Color Palette */
+    --primary-color: #3A6351; /* Emerald Green */
+    --secondary-color: #1E3A5F; /* Dark Blue */
+    --accent-color: #C2A83E; /* Gold/Beige */
+    --background-color: #F8F8F8; /* Light Gray/White */
+    --text-color: #333333; /* Dark Gray for readability */
+    --light-text-color: #666666; /* Lighter text for subheadings */
+    --button-hover-color: #2E4D44; /* Darker shade for hover states */
+
+    /* Fonts */
+    --font-main: 'Lora', serif; /* Elegant, readable serif font */
+    --font-secondary: 'Open Sans', sans-serif; /* Clean sans-serif for headings and buttons */
+
+    /* Font Weights */
+    --font-weight-normal: 400; /* Normal weight */
+    --font-weight-bold: 700; /* Bold weight */
+    --font-weight-light: 300; /* Light weight */
+
+    /* Typography */
+    --h1-font-size: 2.5rem; /* Hero section heading */
+    --h2-font-size: 2rem; /* Section titles */
+    --h3-font-size: 1.5rem; /* Subsection headings */
+    --body-font-size: 1rem; /* Standard text */
+    --small-font-size: 0.875rem; /* For minor text like copyright */
+
+    /* Spacing */
+    --section-padding: 60px; /* Consistent padding for sections */
+    --card-padding: 20px; /* Padding inside course cards */
+    --button-padding: 12px 24px; /* Padding for CTA buttons */
+    --border-radius: 8px; /* Rounded corners for buttons and images */
+
+    /* Box Shadows */
+    --box-shadow-light: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 20px 40px;
+    box-shadow: var(--box-shadow-light);
+    position: sticky;
+    top: 0;
+}
+
+.logo-div h1 {
+    color: white;
+    font-size: var(--h2-font-size);
+    margin: 0;
+    font-weight: var(--font-weight-bold);
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Aligns nav items to the right */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px; /* Space between items */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-normal);
+    padding: 8px 16px; /* Adds padding for a button-like feel */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: var(--border-radius);
+}
+
+nav a:hover {
+    background-color: var(--accent-color); /* Background on hover */
+    color: var(--secondary-color); /* Change text color on hover */
+    text-decoration: none;
+}
+
+
+
+
+/* Hero Section */
+#hero {
+    background-image: url('images/Quran-image.jpg'); /* Replace with your Quran image path */
+    background-size: cover; /* Make the background cover the entire section */
+    background-position: center; 
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center;
+    color: white; /* White text for contrast */
+    padding: 20px; /* Add padding for responsiveness */
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    border-radius: var(--border-radius); /* Rounded corners */
+    padding: 40px; /* Inner padding */
+}
+
+.quran-verse {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 10px; /* Margin below verse */
+}
+
+.translation {
+    font-size: var(--body-font-size);
+    margin: 0 0 40px; /* Margin below translation */
+    font-weight: var(--font-weight-light); /* Lighter font weight for translation */
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: var(--button-padding);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: var(--body-font-size);
+    font-weight: var(--font-weight-bold);
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color); /* Darker shade on hover */
+}
+
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+#about h2 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: var(--body-font-size);
+    margin: 0 0 40px;
+}
+
+.tutor-info {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    align-items: center;
+}
+
+.tutor-image {
+    width: 150px; /* Set a fixed width for the tutor image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 20px; /* Space below image */
+}
+
+.tutor-description {
+    max-width: 600px; /* Limit width for better readability */
+}
+
+
+/* Courses Section */
+#courses {
+    padding: 60px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+#courses h2 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 40px;
+}
+
+.course-list {
+    display: flex;
+    justify-content: center; /* Center the course cards */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.course {
+    background-color: var(--secondary-color);
+    color: #F8F8F8;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin: 10px;
+    width: 250px; /* Fixed width for course cards */
+    box-shadow: var(--box-shadow-light);
+}
+
+.course h3 {
+    font-size: var(--h2-font-size);
+    margin-bottom: 10px;
+}
+
+.course p {
+    font-size: var(--body-font-size);
+    margin: 5px 0; /* Margin for spacing */
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: var(--button-padding);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: var(--body-font-size);
+    font-weight: var(--font-weight-bold);
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Allow padding and margin to apply */
+    margin-top: 10px; /* Space above button */
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color); /* Darker shade on hover */
+}
+
+
+/* Button Styles */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--button-padding);
+    cursor: pointer;
+    font-size: var(--body-font-size);
+    font-weight: var(--font-weight-bold);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: var(--body-font-size);
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+
+@media (max-width: 1000px) {
+    header{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
